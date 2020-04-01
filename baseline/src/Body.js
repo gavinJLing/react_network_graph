@@ -49,11 +49,19 @@ function Body() {
     setTodos(newTodos);
   }
 
+  const removeToDo = index => {
+    console.log("remove index:" + index)
+    if (! todos[index].isCompleted )  return;
+    const newTodos = [...todos];
+    newTodos.splice(index, 1);
+    setTodos(newTodos);
+  }
+
   return (
    <div className='app'>
       <div className='todo-list'>
         {todos.map((todo, index)  =>  (
-          <Todo key={index} index={index}  todo={todo} completeTodo={competeToDo} />
+          <Todo key={index} index={index}  todo={todo} completeTodo={competeToDo} removeTodo={removeToDo} />
         ))}
          <TodoForm addToDo={addToDo} />
       </div>
