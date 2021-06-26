@@ -16,3 +16,14 @@ TypeScrip:
 - ESLint  (https://eslint.org/) 
 - Material Icon theme
 - Prettier Code formater -  pref. -> keyb shortcuts -> Search: Format Document [Shift][Alt]+[F]
+
+
+*Dev env setup*
+
+To auto re-load (reexecute) the web page after a `$ tsc {typescript.ts file}`
+```
+ $ npm install --save-dev lite-server
+ $ edit package.json - add script "start" : "lite-server"
+ $ npm start
+ ```
+
